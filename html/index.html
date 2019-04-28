@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css"
+    />
+    <link rel="stylesheet" href="../css/mainpage.css" />
+    <script src="../scripts/scripts.js"></script>
+    <title>House Price Calculator</title>
+  </head>
+  <body>
+    <!--START HERE-->
+    <div class="container">
+      <header id="main-header">
+        <div class="row no-gutters">
+          <div class="col-lg-4 col-md-5">
+            <img src="../img/4.jpg" alt="" />
+          </div>
+          <div class="col-lg-8 col-md-7">
+            <div class="d-flex flex-column">
+              <div class="p-5 bg-dark text-white">
+                <div
+                  class="d-flex flex-row justify-content-between align-items-center"
+                >
+                  <h1 class="display-5">House Price Calculator</h1>
+                  <div>
+                    <a
+                      href="https://canvas.wpi.edu/courses/12978"
+                      class="text-white"
+                    >
+                      <i class="fas fa-university"></i>
+                    </a>
+                  </div>
+                  <div>
+                    <a
+                      href="https://github.com/YufeiGao6/DSProject"
+                      class="text-white"
+                    >
+                      <i class="fab fa-github"></i>
+                    </a>
+                  </div>
+                  <div class="d-none d-lg-block">
+                    <a
+                      href="https://www.kaggle.com/c/house-prices-advanced-regression-techniques"
+                      class="text-white"
+                    >
+                      <i class="fab fa-kaggle"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="p-4 bg-black">
+                This house price calculator is developed by Wacky ❤Girls.
+              </div>
+
+              <div>
+                <div
+                  class="d-flex flex-row text-white align-items-stretch text-center"
+                >
+                  <div
+                    class="port-item p-4 bg-primary"
+                    data-toggle="collapse"
+                    data-target="#calculator"
+                  >
+                    <i class="fas fa-dollar-sign fa-2x d-block"></i>
+                    <span class="d-none d-sm-block">Calculator</span>
+                  </div>
+                  <div
+                    class="port-item p-4 bg-danger"
+                    data-toggle="collapse"
+                    data-target="#aboutus"
+                  >
+                    <i class="fas fa-info fa-2x d-block"></i>
+                    <span class="d-none d-sm-block">About Us</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!--Calculator-->
+      <div id="calculator" class="collapse show">
+        <div class="card card-body bg-primary text-white py-5">
+          <h2>Calculator</h2>
+          <p class="lead">
+            Use this House Price Calculator to find out the price of your house!
+          </p>
+        </div>
+        <div class="card card-body py-5">
+          <h3>Calculator</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
+            aliquid esse dolore qui possimus aspernatur!
+          </p>
+          <!--<hr />-->
+          <div id="features">
+            <table class="table table-hover">
+              <tr>
+                <td>GrLivArea</td>
+                <td><input type="text" id="f1" style="width:200px" /></td>
+              </tr>
+              <tr>
+                <td>LotArea</td>
+                <td><input type="text" id="f2" style="width:200px" /></td>
+              </tr>
+              <tr>
+                <td>BsmtFinSF1</td>
+                <td><input type="text" id="f3" style="width:200px" /></td>
+              </tr>
+              <tr>
+                <td>OverallQual</td>
+                <td input type = "text">
+                <select id = "f4">
+                  <option value="10">10 Very Excellent</option>
+                  <option value="9">9 Excellent</option>
+                  <option value="8">8 Very Good</option>
+                  <option value="7">7 Good</option>
+                  <option value="6">6 Above Average</option>
+                  <option value="5">5 Average</option>
+                  <option value="4">4 Below Average</option>
+                  <option value="3">3 Fair</option>
+                  <option value="2">2 Poor</option>
+                  <option value="1">1 Very Poor</option>
+                </select>
+                </td>
+                <!--<td><input type="text" id="f4" style="width:200px" /></td>-->
+              </tr>
+              <tr>
+                <td>TotalBsmtSF</td>
+                <td><input type="text" id="f5" style="width:200px" /></td>
+              </tr>
+            </table>
+
+            <input class="btn btn-dark"
+              id="btn_cal"
+              type="button"
+              value="Calculate"
+              onclick="sendFeatureInfo()"
+              style="width:270px;"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!--About Us-->
+      <div id="aboutus" class="collapse">
+        <div class="card card-body bg-danger text-white py-5">
+          <h2>About Us</h2>
+          <p class="lead">
+            We are the WACKY GIRLS!
+          </p>
+        </div>
+        <div class="card card-body py-5">
+          <h3>Who are we?</h3>
+          <p>
+            I am sorry that you haven't known us before.
+          </p>
+          <div class="card-deck">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Jerry Assan</h4>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste,
+                  enim?
+                </p>
+                <p class="p-2 mb-3 bg-dark text-white">
+                  Major: Computer Science
+                </p>
+                <p class="p-2 mb-3 bg-dark text-white">
+                  Minor: Data Science
+                </p>
+              </div>
+              <div class="card-footer">
+                <h6 class="text-muted">
+                  Graduation Year: 2020
+                </h6>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Ruyue Wang</h4>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste,
+                  enim?
+                </p>
+                <p class="p-2 mb-3 bg-dark text-white">
+                  Major: Computer Science
+                </p>
+                <p class="p-2 mb-3 bg-dark text-white">
+                  Minor: Data Science
+                </p>
+              </div>
+              <div class="card-footer">
+                <h6 class="text-muted">
+                  Graduation Year: 2020
+                </h6>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Yufei Gao</h4>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste,
+                  enim?
+                </p>
+                <p class="p-2 mb-3 bg-dark text-white">
+                  Major: Computer Science
+                </p>
+                <p class="p-2 mb-3 bg-dark text-white">
+                  Minor: Data Science
+                </p>
+              </div>
+              <div class="card-footer">
+                <h6 class="text-muted">
+                  Graduation Year: 2019
+                </h6>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Yuxin Wu</h4>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste,
+                  enim?
+                </p>
+                <p class="p-2 mb-3 bg-dark text-white">
+                  Major: Computer Science
+                </p>
+                <p class="p-2 mb-3 bg-dark text-white">
+                  Minor: Data Science
+                </p>
+              </div>
+              <div class="card-footer">
+                <h6 class="text-muted">
+                  Graduation Year: 2020
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Footer-->
+      <footer id="main-footer" class="p-5 bg-dark text-white">
+        <div class="row justify-content-between">
+          <div class="col-md-2.5">
+            <a
+              href="https://www.google.com/search?q=%E8%8D%AF%E6%B0%B4%E5%93%A5&safe=active&source=lnms&tbm=isch&sa=X&ved=0ahUKEwi8itq-hvLhAhUEP60KHXj-DbYQ_AUIDigB&biw=1386&bih=766"
+              class="btn btn-outline-light"
+            >
+              <i class="fas fa-cloud"></i> Have Some Fun
+            </a>
+          </div>
+          <div class="col-md-2.5">
+            <a
+              href="mailto:ywu8@wpi.edu,ygao6@wpi.edu,jxassan@wpi.edu,rwang5@wpi.edu?subject = Feedback for House Price Calculator"
+              class="btn btn-outline-light"
+            >
+              <i class="fas fa-cloud"></i> Send Us An Email
+            </a>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
+
+    <script>
+      $(".port-item").click(function() {
+        $(".collapse").collapse("hide");
+      });
+
+      $(document).on("click", '[data-toggle="lightbox"]', function(e) {
+        e.preventDefault();
+        $(this).ekkoLightbox();
+      });
+
+      //Get the current year for the copyright
+      $("#year").text(new Data().getFullYear());
+    </script>
+  </body>
+</html>
