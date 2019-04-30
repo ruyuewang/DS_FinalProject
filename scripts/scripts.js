@@ -25,7 +25,9 @@ function sendFeatureInfo() {
     // receive data
     ws.onmessage = function (evt) {
         var received_msg = evt.data;
-        alert(received_msg);
+        var cal_result = document.getElementById("cal_result");
+        cal_result.innerText= "$" + received_msg;
+        // alert(received_msg);
         ws.close(); //close after the data is received
     };
     // event after close

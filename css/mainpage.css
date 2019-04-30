@@ -23,6 +23,12 @@
  height: 100%;
 }
 
+
+#cal_result{
+    margin-left: 410px;
+    font-weight: bold;
+}
+
 #main-header .port-item {
  width: 50%;
 }
