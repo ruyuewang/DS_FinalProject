@@ -38,7 +38,7 @@ def message_back(client, server, message):
     server.send_message(client, result)
 
 # @TODO need to change the function to correct one
-def handle_feature(GrLivArea, LotArea, BsmtFinSF1, OverallQual, TotalBsmtSF):
+def handle_feature(GrLivArea, LotArea, TotalBsmtSF, OverallQual, YearBuilt):
     train = pd.read_csv("train.csv")
 
     train['MSZoning'] = pd.factorize(train['MSZoning'])[0]
@@ -98,9 +98,9 @@ def handle_feature(GrLivArea, LotArea, BsmtFinSF1, OverallQual, TotalBsmtSF):
     predict_df = pd.DataFrame([array], columns=feature_names)
     predict_df['GrLivArea'] = [GrLivArea]
     predict_df['LotArea'] = [LotArea]
-    predict_df['BsmtFinSF1'] = [BsmtFinSF1]
-    predict_df['OverallQual'] = [OverallQual]
     predict_df['TotalBsmtSF'] = [TotalBsmtSF]
+    predict_df['OverallQual'] = [OverallQual]
+    predict_df['YearBuilt'] = [YearBuilt]
 
     model.predict(predict_df)
     #print(model.predict(predict_df)[0])
